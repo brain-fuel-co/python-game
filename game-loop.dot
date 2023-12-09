@@ -8,5 +8,5 @@ digraph G {
   "Update" -> "Game State"
 
   "Quit Game" -> {"Save Game", "Quit Without Saving"}
-  {"Save Game", "Quit Without Saving"} -> {"Load Game", "Exit Program"}
+  {"Save Game", "Quit Without Saving"} -> {"Start", "Exit Program"}
 }
