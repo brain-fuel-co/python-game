@@ -1,0 +1,12 @@
+digraph G {
+  "Start" -> {"Create Game", "Load Game"}
+  { rank=same; "Create Game", "Load Game"}
+  {"Create Game", "Load Game"} -> "Game State"
+  "Game State" -> "Something Happens"
+  "Something Happens" -> {"Update", "Quit Game"}
+  { rank=same; "Something Happens", "Update" }
+  "Update" -> "Game State"
+
+  "Quit Game" -> {"Save Game", "Quit Without Saving"}
+  {"Save Game", "Quit Without Saving"} -> {"Load Game", "Exit Program"}
+}
