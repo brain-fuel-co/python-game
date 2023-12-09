@@ -1,5 +1,5 @@
 digraph G {
-  "Start" -> {"Create Game", "Load Game"}
+  "Start" -> {"Create Game", "Load Game", "Exit Program"}
   { rank=same; "Create Game", "Load Game"}
   {"Create Game", "Load Game"} -> "Game State"
   "Game State" -> "Something Happens"
@@ -8,5 +8,5 @@ digraph G {
   "Update" -> "Game State"
 
   "Quit Game" -> {"Save Game", "Quit Without Saving"}
-  {"Save Game", "Quit Without Saving"} -> {"Start", "Exit Program"}
+  {"Save Game", "Quit Without Saving"} -> "Start"
 }
